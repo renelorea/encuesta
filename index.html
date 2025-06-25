@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Encuesta de Satisfacción</title>
+  <link rel="stylesheet" href="style.css" />
+  
+</head>
+<body>
+  <h1>Encuesta sobre el sistema de punto de venta</h1>
+  <form id="surveyForm">
+    <div class="question">
+        <p>Nombre:</p>
+        <input type="text" name="nombre" required />
+      </div>
+      <div class="question">
+        <p>Número de equipo:</p>
+        <select name="equipo" required>
+            <option value="">Seleccione...</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+          </select>
+      </div>
+      
+    <div class="question">
+      <p>1. ¿Qué tan fácil fue usar el sistema?</p>
+      <select name="q1" required>
+        <option value="">Seleccione...</option>
+        <option>Muy fácil</option>
+        <option>Fácil</option>
+        <option>Regular</option>
+        <option>Difícil</option>
+        <option>Muy difícil</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <p>2. ¿Estás satisfecho con la velocidad del sistema?</p>
+      <select name="q2" required>
+        <option value="">Seleccione...</option>
+        <option>Totalmente satisfecho</option>
+        <option>Satisfecho</option>
+        <option>Neutral</option>
+        <option>Insatisfecho</option>
+        <option>Totalmente insatisfecho</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <p>3. ¿Cómo calificarías la interfaz del sistema?</p>
+      <select name="q3" required>
+        <option value="">Seleccione...</option>
+        <option>Excelente</option>
+        <option>Buena</option>
+        <option>Regular</option>
+        <option>Mala</option>
+        <option>Pésima</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <p>4. ¿Recomendarías este sistema a otros negocios?</p>
+      <select name="q4" required>
+        <option value="">Seleccione...</option>
+        <option>Definitivamente sí</option>
+        <option>Probablemente sí</option>
+        <option>No estoy seguro</option>
+        <option>Probablemente no</option>
+        <option>Definitivamente no</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <p>5. ¿Tienes sugerencias para mejorar?</p>
+      <textarea name="q5" rows="4" cols="50" placeholder="Escribe tus sugerencias..."></textarea>
+    </div>
+
+    <button type="submit" id="button">Enviar Respuestas</button>
+    <div id="mensajeEnviado" class="oculto">✅ ¡Gracias! Tus respuestas han sido enviadas.</div>
+
+  </form>
+  <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('L8HT8vsG0ebaeNakO')
+</script>
+  <script src="script.js"></script>
+</body>
+</html>
